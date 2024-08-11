@@ -1,0 +1,26 @@
+<!--components/spu-scroll/index.wxml-->
+        <!--<text>components/spu-scroll/index.wxml</text>-->
+<!--引入外部WXS-->
+<wxs src="../../miniprogram_npm/lin-ui/filter/string.wxs" module="s"></wxs>
+<view class="container l-class">
+    <image class="title" src="{{theme.title_img}}"></image>
+    <!--    滚动视图横着滚动，打开scroll-x，弹性布局，打开enable-flex-->
+    <!--    <scroll-view scroll-x enable-flex class="scroll-view">-->
+    <scroll-view scroll-x class="scroll-view">
+        <view class="inner">
+            <block wx:for="{{spuList}}">
+                <view class="spu-container">
+                    <image src="{{item.img}}" class="spu-img"></image>
+<!--                    <text class="spu-text">{{item.title}}</text>-->
+                    <!--       对文字进行截断，如果大于8个文字，就用省略号表示，使用外部的过滤器，需要使用wxs引入，并指定引入的标签             -->
+                    <text class="spu-text">{{item.title.length>=8?(s.substring(item.title,0,7)+'...'):item.title}}</text>
+                    <!--                <l-price color="#157658" unit="$" value="777"></l-price>-->
+                    <l-price l-value-class="price-value"
+                             l-unit-class="price-unit" unit="$"
+                             value="{{item.price}}"
+                             autofix="00"></l-price>
+                </view>
+            </block>
+        </view>
+    </scroll-view>
+</view>

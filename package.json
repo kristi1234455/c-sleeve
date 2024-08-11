@@ -1,0 +1,22 @@
+{
+  "name": "c-sleeve",
+  "version": "1.0.0",
+  "description": "echo \"# c-sleeve\" >> README.md\r git init\r git add README.md\r git commit -m \"first commit\"\r git branch -M main\r git remote add origin https://github.com/kristi1234455/c-sleeve.git\r git push -u origin main",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kristi1234455/c-sleeve.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kristi1234455/c-sleeve/issues"
+  },
+  "homepage": "https://github.com/kristi1234455/c-sleeve#readme",
+  "dependencies": {
+    "lin-ui": "^0.9.13"
+  }
+}

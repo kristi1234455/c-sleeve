@@ -1,0 +1,37 @@
+<!--<view>-->
+<view class="container">
+    <image class="top-theme" src="{{themeA.entrance_img}}"></image>
+<!--  注意：使用swiper标签时，要设置高度，高度需要在swiper和swiper-item都设置样式  -->
+    <swiper class="swiper"
+            indicator-dots
+            indicator-active-color="#157658"
+            autoplay
+            circular>
+        <block wx:for="{{bannerB.items}}" wx:key="index">
+            <swiper-item>
+                <image class="swiper" src="{{item.img}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+
+<!--  注意：组件的使用，先在components中指定组件，在  -->
+    <s-category-grid grid="{{grid}}"></s-category-grid>
+    
+<!--    优惠券的活动实际上就是一张图片-->
+    <image class="activity" src="{{activityD.entrance_img}}"></image>
+<!--    <view class="spu-scroll">-->
+    <view >
+        <s-spu-scroll l-class="spu-scroll" theme="{{themeE}}" spu-list="{{themeESpu}}" wx:if="{{themeE.online}}"></s-spu-scroll>
+    </view>
+    <image class="quality" src="{{themeF.entrance_img}}"></image>
+
+<!--    使用自定义组件-->
+    <s-hot-list banner="{{bannerG}}"></s-hot-list>
+
+    <image class="fashion" src="{{themeH.entrance_img}}"></image>
+    <view  class="spu-bottom">
+        <image class="title-spu-bottom" src="/imgs/home/title@interest.png"></image>
+<!--        需要传递过来抽象组件-->
+        <l-wather-flow generic:l-water-flow-item=""></l-wather-flow>
+    </view>
+</view>

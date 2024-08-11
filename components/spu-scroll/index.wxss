@@ -1,0 +1,61 @@
+/* components/spu-scroll/index.wxss */
+
+.container {
+    /*这里设置了宽度是100%，并且设置了padding，就会导致滑动页面，底部会出现滚动栏，
+    因为宽度一定会加上padding，100%宽度加上padding，就会超出原本宽度，就会出现滚动条，就需要加上box-sizing*/
+    box-sizing: border-box;
+    width: 100%;
+    padding: 42rpx 0 34rpx 28rpx;
+    /*#ffffff白色*/
+    background-color: #ffffff;
+}
+
+.title {
+    width: 692rpx;
+    height: 90rpx;
+}
+
+/*滚动视图是横着滚动*/
+.scroll-view {
+    margin-top: 28rpx;
+    /*横轴排列后，下半部分仍然有大片空白，是因为竖着排列的空间没有被释放出来*/
+    /*需要关闭scroll-view的弹性布局，使用view封装，使用view进行横向排列设置*/
+    /*height: 600rpx;*/
+    display: flex;
+    flex-direction: row;
+}
+
+.inner {
+    display: flex;
+    flex-direction: row;
+}
+
+/*图片和文字等产品的信息描述弹性布局，竖着对齐*/
+.spu-container {
+    margin-right: 60rpx;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.price-unit {
+    font-size: 24rpx !important;
+    color:#157658 !important;
+}
+
+.price-unit {
+    font-size: 26rpx !important;
+    color:#157658!important;
+}
+
+.spu-img {
+    width: 160rpx;
+    height: 160rpx;
+}
+
+.spu-text{
+    font-size:20rpx;
+    color:#666666;
+    margin-top:20rpx;
+}
+

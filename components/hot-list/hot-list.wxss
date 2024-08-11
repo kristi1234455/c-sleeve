@@ -1,0 +1,45 @@
+/* components/hot-list/hot-list.wxss */
+@import "../../wxss/sleeve.wxss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding-top:40rpx;
+    background-color: #ffffff;
+}
+
+.title {
+    width: 690rpx;
+    height: 90rpx;
+}
+
+.inner-container{
+    margin-top: 30rpx;
+    display:flex;
+    flex-direction: row;
+    /*弹性布局，两端分布*/
+    justify-content: space-between;
+    /*两端分布的布局，必须要设置宽度，才能生效*/
+    width: 100%;
+}
+
+.left {
+    /*弹性布局，消除图片默认边距*/
+    display: flex;
+    width: 346rpx;
+    height: 522rpx;
+}
+
+.right-container{
+    display:flex;
+    flex-direction:column;
+    /*右侧两张图片垂直剧中，两端分布，也需要设置高度，才能生效，这里没有设置，因为左边图片已经设置了高度，撑起来了*/
+    justify-content: space-between;
+}
+
+.right-size {
+    display: flex;
+    width: 400rpx;
+    height: 260rpx;
+}

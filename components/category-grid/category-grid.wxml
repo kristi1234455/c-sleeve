@@ -1,0 +1,21 @@
+<!--<l-grid l-class="inner-container" show-border="{{true}}">-->
+<!--    <l-grid-item wx:for="{{grid}}" wx:key="index" key="{{index}}" slot="{{index}}">-->
+<!--        <image class="img" src="{{item.img}}"></image>-->
+<!--        &lt;!&ndash;        <l-icon name="{{item.img}}" />&ndash;&gt;-->
+<!--        <view class="text">{{item.title}}</view>-->
+<!--    </l-grid-item>-->
+<!--</l-grid>-->
+
+<view class="container">
+<!--    6个分类被块包裹，且有灰色实线框-->
+    <l-grid row-num="5" l-class="inner-container">
+        <block wx:for="{{grid}}" wx:key="index">
+            <l-grid-item key="{{index}}" slot="{{index}}">
+                <view class="grid-item">
+                    <image class="img" src="{{item.img}}"></image>
+                    <text class="text">{{item.title}}</text>
+                </view>
+            </l-grid-item>
+        </block>
+    </l-grid>
+</view>
